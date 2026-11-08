@@ -153,7 +153,7 @@ auc = roc_auc_score(y_pru, pipe.predict_proba(X_pru)[:, 1])
 filas.append(("7b_juntar_azar", acc, auc))
 print(f"7b_juntar_azar acc={acc:.4f} auc={auc:.4f}")
 
-pd.DataFrame(filas, columns=["variante", "acc", "auc"]).to_csv("resultados/ablacion.csv", index=False)
+pd.DataFrame(filas, columns=["variante", "acc", "auc"]).to_csv("resultados/tablacomparativa.csv", index=False)
 
 
 # -- PREGUNTAS --
