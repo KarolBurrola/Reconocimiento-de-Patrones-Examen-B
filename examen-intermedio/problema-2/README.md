@@ -1,5 +1,6 @@
 # Problema 2 — Árboles que cortan en diagonal
 Karol Burrola Torres · 223210891 · a=1, b=9, semilla=223210891.
+
 Datos reales: a mod 4 = 1 → cáncer de mama (WDBC, maligno M = 1, 569 filas, 37% positivas).
 Ángulo (b): 10 + 5·9 = 55 grados.
 
