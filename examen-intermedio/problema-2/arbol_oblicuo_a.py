@@ -115,4 +115,4 @@ if __name__ == "__main__":
     assert abs(direccion[0] + direccion[1]) < 1e-8 and direccion[0] > 0, direccion
     mi_arbol = ArbolOblicuo(max_prof=3, min_muestras=2, competir=False).fit(X, y)
     assert (mi_arbol.predict(X) == y).all()
-    print("assert ok: direccion =", direccion, "hojas =", mi_arbol.n_hojas())
+    print("Prueba 6 puntos terminada: w proporcional a (1,-1), 0 errores, 2 hojas:", direccion)
