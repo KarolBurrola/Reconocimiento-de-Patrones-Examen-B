@@ -37,6 +37,7 @@ profundidad 1–8.
 | Eje | 2 | 0.928 | 0.954 | 4 | 0.01s |
 | Bosque | 5 | 0.956 | 0.990 | — | ~0.6s |
 | Bagging_oblicuo | 2 | 0.972 | 0.994 | — | ~6s |
+
 Decisiones: Métrica AUC (el 37% desbalancea la accuracy) + Acc de apoyo; Prof elegida por validación cruzada barriendo 1–8 por modelo (el bagging hereda la del oblicuo). El Oblicuo supera al Eje con las mismas 4 hojas; el bagging de oblicuos gana a todo.
 
 ## (d) Cuándo vale la pena (`codigo_conclusiones.py`)
