@@ -30,13 +30,13 @@ Base consultora: profundidad None, **acc=0.913, AUC=0.970**.
 | Variante | acc | AUC | Lectura |
 |---|---|---|---|
 | Codigo_consultora | 0.913 | 0.970 | — |
-| 1_Sin_duplicar | 0.903 | 0.906 | copias inflan AUC ~6 pp |
-| 2_3_Preproceso_train_dup | 0.821 | 0.904 | scaler/select fuera casi no pesan con n grande |
-| 4_Validacion_Interna | 0.913 | 0.970 | con n=15k el sesgo de elegir 4 es ~0.5 pp (teoría b) |
-| 5_Sin_duration | 0.810 | 0.752 | **pesa más**: duration explica ~22 pp de AUC |
-| 6_Temporal_con_dup | 0.749 | 0.815 | el tiempo sí mueve el número |
-| 7_juntar_temporal | 0.717 | 0.703 | honesto simple |
-| 7b_juntar_azar | 0.810 | 0.752 | azar > temporal: hay deriva |
+| 1_Sin_duplicar | 0.903 | 0.906 | Las copias inflan AUC ~6 pp |
+| 2_3_Preproceso_train_dup | 0.821 | 0.904 | Scaler/select fuera casi no pesan con n grande |
+| 4_Validacion_Interna | 0.913 | 0.970 | Con n=15k el sesgo de elegir 4 es ~0.5 pp (teoría b) |
+| 5_Sin_duration | 0.810 | 0.752 | **Pesa más**: duration explica ~22 pp de AUC |
+| 6_Temporal_con_dup | 0.749 | 0.815 | El tiempo sí mueve el número |
+| 7_juntar_temporal | 0.717 | 0.703 | Honesto simple |
+| 7b_juntar_azar | 0.810 | 0.752 | Azar > temporal |
 
 Comparación con teoría (a): con p≈0.81 real, Acc≈0.48+0.52·0.81≈0.90, igual que la base 0.913. Las copias + duration explican el 93%.
 
