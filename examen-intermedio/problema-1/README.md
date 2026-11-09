@@ -43,10 +43,11 @@ Comparación con teoría (a): con p≈0.81 real, Acc≈0.48+0.52·0.81≈0.90, i
 ## (d) Versión honesta (`codigohonesto.py`)
 Sin trampas: nada se ajusta con la prueba, no se fotocopia nada y la profundidad se elige solo con el train. Se prueba de dos formas: por tiempo (último 20% como próxima campaña,
 la principal) y al azar (diagnóstico). Como solo el 12% contrata, lo que importa no es la accuracy sino el orden: a quién llamar primero.
-| Split | mejor prof | acc | AUC IC95 | AP | precision_top10 |
+| Split | Mejor prof | Acc | AUC IC95 | AP | Precision_top10 |
 |---|---|---|---|---|---|
-| temporal | 4 | 0.525 | 0.717 [0.706, 0.728] | 0.517 | 0.586 |
-| azar | 8 | 0.667 | 0.744 [0.727, 0.761] | 0.366 | 0.438 |
+| Temporal | 4 | 0.525 | 0.717 [0.706, 0.728] | 0.517 | 0.586 |
+| Azar | 8 | 0.667 | 0.744 [0.727, 0.761] | 0.366 | 0.438 |
+
 Resumido: Llamando al 10% con más puntaje, contratan 44–59 de cada 100, contra 12–32 llamando al azar.
 
 ## (e) Ruido (`codigoruido.py` → `ruido.png`)
