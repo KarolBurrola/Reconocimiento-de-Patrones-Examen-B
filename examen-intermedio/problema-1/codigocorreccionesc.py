@@ -1,4 +1,4 @@
-import io, zipfile, urllib.request
+import io, os, zipfile, urllib.request
 import numpy as np, pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.feature_selection import SelectKBest, f_classif
@@ -136,8 +136,8 @@ pipe = make_pipeline(StandardScaler(), SelectKBest(f_classif, k=11),
 pipe.fit(X_ent, y_ent)
 acc = accuracy_score(y_pru, pipe.predict(X_pru))
 auc = roc_auc_score(y_pru, pipe.predict_proba(X_pru)[:, 1])
-filas.append(("7_juntar_temporal", acc, auc))
-print(f"7_juntar_temporal acc={acc:.4f} auc={auc:.4f}")
+filas.append(("7_Juntar_temporal", acc, auc))
+print(f"7_Juntar_temporal acc={acc:.4f} auc={auc:.4f}")
 
 # 7b) Juntar: Split al azar
 X_ent, X_pru, y_ent, y_pru = train_test_split(X_sin, y, test_size=0.2, random_state=223210891)
@@ -150,9 +150,10 @@ pipe = make_pipeline(StandardScaler(), SelectKBest(f_classif, k=11),
 pipe.fit(X_ent, y_ent)
 acc = accuracy_score(y_pru, pipe.predict(X_pru))
 auc = roc_auc_score(y_pru, pipe.predict_proba(X_pru)[:, 1])
-filas.append(("7b_juntar_azar", acc, auc))
-print(f"7b_juntar_azar acc={acc:.4f} auc={auc:.4f}")
+filas.append(("7b_Juntar_azar", acc, auc))
+print(f"7b_Juntar_azar acc={acc:.4f} auc={auc:.4f}")
 
+os.makedirs("resultados", exist_ok=True)
 pd.DataFrame(filas, columns=["variante", "acc", "auc"]).to_csv("resultados/tablacomparativa.csv", index=False)
 
 

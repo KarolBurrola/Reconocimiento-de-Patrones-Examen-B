@@ -1,4 +1,4 @@
-import io, time, zipfile, urllib.request
+import io, time, os, zipfile, urllib.request
 import numpy as np, pandas as pd
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.ensemble import RandomForestClassifier, BaggingClassifier
@@ -67,4 +67,5 @@ for nombre, modelo in modelos.items():
     filas.append((nombre, profundidad_elegida[nombre], round(acc, 4), round(auc, 4), hojas, round(tiempo, 2)))
     print(f"{nombre:<16} | {profundidad_elegida[nombre]:<4} | {acc:<6.4f} | {auc:<6.4f} | {str(hojas):<5} | {tiempo:.2f}s")
 
+os.makedirs("resultados", exist_ok=True)
 pd.DataFrame(filas, columns=["Modelo", "Prof", "Acc", "AUC", "Hojas", "Tiempo_s"]).to_csv("resultados/reales.csv", index=False)

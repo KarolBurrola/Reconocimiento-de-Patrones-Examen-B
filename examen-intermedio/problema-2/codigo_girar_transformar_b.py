@@ -1,3 +1,4 @@
+import io, os, zipfile, urllib.request
 import numpy as np, pandas as pd
 import matplotlib
 matplotlib.use("Agg")
@@ -37,6 +38,7 @@ for nombre, (Xe, ye) in datos.items():
             filas.append((nombre, prof, nombre_modelo, acc))
             print(f"{nombre:<10} | {prof:<4} | {nombre_modelo:<8} | {acc:.3f}")
 
+os.makedirs("resultados", exist_ok=True)
 pd.DataFrame(filas, columns=["Datos", "Prof", "Modelo", "Acc"]).to_csv("resultados/rotacion.csv", index=False)
 
 fig, ejes = plt.subplots(1, 3, figsize=(12, 4), sharey=True)

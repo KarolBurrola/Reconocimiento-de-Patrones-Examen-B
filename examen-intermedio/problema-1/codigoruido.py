@@ -1,3 +1,4 @@
+import io, os, zipfile, urllib.request
 import numpy as np, pandas as pd
 from sklearn.feature_selection import SelectKBest, f_classif
 from sklearn.linear_model import LogisticRegression
@@ -25,6 +26,7 @@ for r in range(REPS):
     print(f"Rep {r+1}/{REPS} Antes={antes[-1]:.3f} Dentro={dentro[-1]:.3f}")
 
 print(f"Antes: Media={np.mean(antes):.3f} Dentro: Media={np.mean(dentro):.3f}")
+os.makedirs("resultados", exist_ok=True)
 pd.DataFrame({"Antes": antes, "Dentro": dentro}).to_csv("resultados/ruido.csv", index=False)
 
 import matplotlib

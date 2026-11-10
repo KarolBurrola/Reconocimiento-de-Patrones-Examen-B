@@ -1,4 +1,4 @@
-import io, zipfile, urllib.request
+import io, os, zipfile, urllib.request
 import numpy as np, pandas as pd
 from sklearn.preprocessing import StandardScaler
 from sklearn.feature_selection import SelectKBest, f_classif
@@ -57,5 +57,6 @@ for nombre, (X_ent, X_pru, y_ent, y_pru) in {
     filas.append((nombre if nombre == "temporal" else "azar_estratificado",
                   prof, acc, auc, lo, hi, ap, precision_top10))
 
+os.makedirs("resultados", exist_ok=True)
 pd.DataFrame(filas, columns=["split", "mejor_prof", "acc", "auc", "auc_lo", "auc_hi", "ap", "precision_top10"]).to_csv(
     "resultados/honesto.csv", index=False)
