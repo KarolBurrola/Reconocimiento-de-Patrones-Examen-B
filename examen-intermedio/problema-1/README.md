@@ -18,7 +18,7 @@ python codigoruido.py
 ---
 
 ## (a) Reproducción (`codigoejemplo.py`)
-Base consultora: Profundidad None, **acc = 0.913, AUC = 0.970**.
+Base consultora: Profundidad None, Exactitud en prueba: 0.913 - AUC en prueba: 0.970
 
 ---
 
