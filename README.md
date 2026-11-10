@@ -1,6 +1,6 @@
-# Examen intermedio — Reconocimiento de Patrones (Examen B, Unidades 1–5)
+# Examen Intermedio B — Reconocimiento de Patrones 
 
-Nombre: Burrola Torres Karol · Expediente: 223210891 · a = 1, b = 9 · Semilla: 223210891.
+Nombre: Burrola Torres Karol · Expediente: 223210891 
 Profesor: Julio Waissman Vilanova · Semestre 2026-2.
 
 ## Estructura
@@ -12,6 +12,7 @@ examen-intermedio/
 ```
 
 ## Parametros personales
+- Semilla : 223210891
 - a = 1 → Problema 1: k = 11, RandomForest (b mod 3 = 0); Problema 2: datos de cáncer de mama.
 - b = 9 → Problema 1: n = 1000, 65 atributos en ruido; Problema 2: giro de 55°.
 
