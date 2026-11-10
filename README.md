@@ -1,6 +1,7 @@
 # Examen Intermedio B — Reconocimiento de Patrones 
 
 Nombre: Burrola Torres Karol · Expediente: 223210891 
+
 Profesor: Julio Waissman Vilanova · Semestre 2026-2.
 
 ## Estructura
