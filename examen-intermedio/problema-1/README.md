@@ -8,10 +8,10 @@
 ```bash
 pip install scikit-learn pandas numpy matplotlib
 cd problema-1
-python codigoejemplo.py        # Base consultora (k=11, seed)
-python codigocorrecciones.py   # Tabla (b) + tabla (c): cada problema y todos juntos
-python codigohonesto.py        # Pipeline + CV + bootstrap
-python codigoruido.py          # Seleccion fuera vs dentro + grafica
+python codigoejemplo.py        
+python codigocorrecciones.py   
+python codigohonesto.py        
+python codigoruido.py          
 ```
 > Los datos se descargan solos desde UCI en cada script y la carpeta `resultados/` se crea sola al correr.
 
