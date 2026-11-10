@@ -11,10 +11,10 @@
 ```bash
 pip install scikit-learn pandas numpy matplotlib
 cd problema-2
-python arbol_oblicuo_a.py             # assert 6 puntos: w proporcional a (1,-1), 0 errores
-python codigo_girar_transformar_b.py  # (b): Sin_girar / Girados 55° / Log + grafica
-python codigo_datos_reales.py         # (c): Oblicuo vs Eje vs Bosque vs Bagging + hojas/tiempos
-python codigo_conclusiones.py         # (d): Diagonal vs Ejes
+python arbol_oblicuo_a.py             
+python codigo_girar_transformar_b.py  
+python codigo_datos_reales.py        
+python codigo_conclusiones.py        
 ```
 > Los datos reales se descargan solos del UCI y la carpeta `resultados/` se crea sola al correr.
 
